@@ -9,7 +9,7 @@ $groupAxapta = array(
     '4' => 'kudryavceva'
 );
 $group1c = array(
- '1' => "gagarin";
+ '1' => "gagarin"
 );
 $groupFin = array(
     '1' => 'krjachina'     
@@ -21,7 +21,7 @@ $groupSysAdmins = array(
 );
 $fillip = array(
     '1' =>'saarc'
-)
+);
 
     function RullGroup() {
     foreach ($groupSuUser as $nickname) {

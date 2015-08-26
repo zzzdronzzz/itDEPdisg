@@ -55,7 +55,7 @@ else {
         <td><form method="get" action="obr.php">
         
         <input type = "hidden" value = '.$row[0].' name="id">
-        <input type= "submit" value = "обработать" class = "btn btn-mini btn-primary">
+        <input type= "submit" value = "просмотреть" class = "btn btn-mini btn-primary">
         </form>
         </td>
         </tr>
