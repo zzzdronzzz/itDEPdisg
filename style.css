@@ -1,26 +1,72 @@
-.bg {
-    position: fixed;
+.mainBlock {
+
     width: 100%;
     height: 100%;
-    background-image: url(img/data-centre3.jpg);
-    background-size: cover;
-    -webkit-filter: blur(5px);
-    z-index: -1;
-}
-.logo {
-    position: fixed;
-    width: 600px;
-    height: 250px;
+    top: 0%;
+    left: 0%;
+    position: absolute;
     
-    top: 50%;
+}
+
+.menu {
+
+    width: 15%;
+    height: 100%;
+    float: left;
+    position: fixed;
+    background-color: #d1d1d1;
+    
+}
+.content {
+ 
+    width: 85%;
+    height: 100%;
+    float: right;
+    position: relative;
+    
+}
+.login {
+ 
+    position: relative;
+    margin: 20% 25% 25% 25%;    
+    
+}
+
+.login input {
+
+    width: 200px;
+    height: 30px;
+
+}
+
+
+.failLogin {
+ 
+    width: 250px;
+    height: 250px;
+    position: fixed;
+    top: 25%;
+    left:45%;
+    right: 45%;
+    
+    
+}
+.formAdmins {
+    
+    width: 500px;
+    
+}
+#blocks {
+ 
+    position: relative;
     left: 50%;
-    margin: -150px 0px 0px -300px;
-    text-align: center;
+    width: 700px;
+    margin: 0px 0px 0px -300px;
+    
 }
-.logo h1 {
-    color: aliceblue;
-    font-size: 62px;
+.tableOBR {
+    width: 90%;   
 }
-body {
-    background-color: black;
+#names {
+     text-align: right;   
 }
