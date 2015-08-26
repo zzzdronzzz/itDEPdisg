@@ -44,9 +44,12 @@ function loginAD($user,$password) {
 }
     if (loginAD($user,$password) == 1) {
         
+        $_SESSION["user_id"] = $user;
+        include '../selectrull.php';        
+        RullGroup($user);
+        
         rulles($user);
      
-        $_SESSION["user_id"] = $user;
         
     }
     else { 
@@ -160,8 +163,8 @@ function checkGroup($adGroups) {
     
     $_SESSION['userRull'] = $userRull;
     $_SESSION['user_name'] = $user;
+    
     header('Location: ../index.php');
 }
-
 
 ?>

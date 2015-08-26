@@ -1,5 +1,10 @@
 <?php
-$groupSuUser = array(
+include 'session.php';
+
+function RullGroup($user) {
+        
+        
+        $groupSuUser = array(
     '1' => 'sala',
     '2' => 'otdelnov');
 $groupAxapta = array(
@@ -17,42 +22,44 @@ $groupFin = array(
 $groupSysAdmins = array(
     '1' => 'appolonov',
     '2' => 'girik',
-    '3' => 'grakov'
+    '3' => 'grakov',
+    '4' => 'sasha'
 );
 $fillip = array(
     '1' =>'saarc'
 );
-
-    function RullGroup() {
+        
+        
     foreach ($groupSuUser as $nickname) {
-        if ($_SESSION['user_id'] == $nickname) {
-            $_SESSION['$group'] = 'groupSuUser';
+        if ($user == $nickname) {
+            $_SESSION['group'] = 'groupSuUser';
         }
     }
     foreach($groupAxapta as $nickname) {
-       if ($_SESSION['user_id'] == $nickname) {
-            $_SESSION['$group'] = 'groupAxapta'; 
+       if ($user == $nickname) {
+            $_SESSION['group'] = 'groupAxapta'; 
     }
     }
     foreach($group1c as $nickname) {
-       if ($_SESSION['user_id'] == $nickname) {
-            $_SESSION['$group'] = 'group1c';
+       if ($user == $nickname) {
+            $_SESSION['group'] = 'group1c';
     }
     }
     foreach($groupFin as $nickname) {
-       if ($_SESSION['user_id'] == $nickname) {
-            $_SESSION['$group'] = 'groupFin'; 
+       if ($user == $nickname) {
+            $_SESSION['group'] = 'groupFin'; 
     }
     }
     foreach($groupSysAdmins as $nickname) {
-       if ($_SESSION['user_id'] == $nickname) {
-            $_SESSION['$group'] = 'groupSysAdmins'; 
+       if ($user == $nickname) {
+            $_SESSION['group'] = 'groupSysAdmins'; 
     }
     }
     foreach($fillip as $nickname) {
-       if ($_SESSION['user_id'] == $nickname) {
-            $_SESSION['$group'] = 'fillip'; 
+       if ($user == $nickname) {
+            $_SESSION['group'] = 'fillip'; 
     }
 }
 }
+
 ?>

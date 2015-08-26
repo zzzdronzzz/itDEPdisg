@@ -59,7 +59,11 @@ else {
 
                         <center>
                             <h3>Добро Пожаловать</h3>
-                            <?php echo $_SESSION["user_id"]; ?>
+                            <?php echo $_SESSION["user_id"] . ' '. $_SESSION['group']; 
+                            if (empty($_SESSION['group'])) {
+                            echo ' fail';
+                            }
+                            ?>
 
 
 

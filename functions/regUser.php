@@ -25,14 +25,14 @@ $podraz = $_POST['podraz'];
     на пример email , axapta и тд
     */
 
-$compCheck = $_POST['compCheck'];
+$compCheck = $_POST['compCheck']; if (empty($compCheck)) { $compCheck = 'нет';}
 $emailCheck = $_POST['emailCheck'];
 $axaptaCheck = $_POST['axaptaCheck'];
 $gppCheck = $_POST['gppCheck'];
-$buhCheck = $_POST['buhCheck'];
-$baseCheck = $_POST['baseCheck'];
+$buhCheck = $_POST['buhCheck']; if (empty($buhCheck)) { $buhCheck = 'нет';}
+$baseCheck = $_POST['baseCheck']; if (empty($baseCheck)) { $baseCheck = 'нет';}
 $tabCheck = $_POST['tabCheck'];
-$garantCheck = $_POST['garantCheck'];
+$garantCheck = $_POST['garantCheck']; if (empty($garantCheck)) {$garantCheck = 'нет';}
 
 // принемаем оставшиеся поля !
 
@@ -70,11 +70,17 @@ if ($howWrite == "1.1") {
             die("запоните поле axapta");
             
         }
+        else {
+        $rullAxapta = 'не заданно';
+        }
         
         if (($gppCheck == true) and (empty($rullGpp))) {
         
             die("заполните поле ГПП");
             
+        }
+        else {
+            $rullGpp = 'не заданно';
         }
         
         if (($tabCheck == true) and (empty($rullTab))){
@@ -82,6 +88,9 @@ if ($howWrite == "1.1") {
             die("заполните поле Табель");
         
         }
+        else {
+            $rullTab = 'не заданно';
+        }    
         
         if (empty($workPhone)) {
          
@@ -139,11 +148,17 @@ if ($howWrite == "1.2") {
             die("запоните поле axapta");
             
         }
+        else {
+        $rullAxapta = 'не заданно';
+        }
         
         if (($gppCheck == true) and (empty($rullGpp))) {
         
             die("заполните поле ГПП");
             
+        }
+        else {
+            $rullGpp = 'не заданно';
         }
         
         if (($tabCheck == true) and (empty($rullTab))){
@@ -151,6 +166,9 @@ if ($howWrite == "1.2") {
             die("заполните поле Табель");
         
         }
+        else {
+            $rullTab = 'не заданно';
+        } 
         
         if (empty($workPhone)) {
          
@@ -167,7 +185,6 @@ if ($howWrite == "1.2") {
         $date = date("Y-m-d H:i");
         $createUser = $_SESSION['user_name'];
         $type = 'КОРФ, Филиалы';
-        $type = 'КОРФ, Москва';
         $token = $name . $fam . $otc . $mobPhone . $createUser;
         mysqli_query($conn,"INSERT INTO `users`(`pod`) VALUES ('$token')");
         
@@ -209,11 +226,17 @@ if ($howWrite == "1.3") {
             die("запоните поле axapta");
             
         }
+        else {
+        $rullAxapta = 'не заданно';
+        }
         
         if (($gppCheck == true) and (empty($rullGpp))) {
         
             die("заполните поле ГПП");
             
+        }
+        else {
+            $rullGpp = 'не заданно';
         }
         
         if (($tabCheck == true) and (empty($rullTab))){
@@ -221,6 +244,9 @@ if ($howWrite == "1.3") {
             die("заполните поле Табель");
         
         }
+        else {
+            $rullTab = 'не заданно';
+        } 
         
         if (empty($workPhone)) {
          
@@ -233,7 +259,6 @@ if ($howWrite == "1.3") {
         $date = date("Y-m-d H:i");
         $createUser = $_SESSION['user_name'];
         $type  = 'НЕД, Держинский';
-        $type = 'КОРФ, Москва';
         $token = $name . $fam . $otc . $mobPhone . $createUser;
         mysqli_query($conn,"INSERT INTO `users`(`pod`) VALUES ('$token')");
         
@@ -270,10 +295,13 @@ if ($howWrite == "1.4") {
             
         }
         
-        if (($axaptaCheck == true) and (empty($rullAxapta))) {
+       if (($axaptaCheck == true) and (empty($rullAxapta))) {
          
             die("запоните поле axapta");
             
+        }
+        else {
+        $rullAxapta = 'не заданно';
         }
         
         if (($gppCheck == true) and (empty($rullGpp))) {
@@ -281,12 +309,18 @@ if ($howWrite == "1.4") {
             die("заполните поле ГПП");
             
         }
+        else {
+            $rullGpp = 'не заданно';
+        }
         
         if (($tabCheck == true) and (empty($rullTab))){
         
             die("заполните поле Табель");
         
         }
+        else {
+            $rullTab = 'не заданно';
+        } 
         
         if (empty($workPhone)) {
          
@@ -299,7 +333,6 @@ if ($howWrite == "1.4") {
         $date = date("Y-m-d H:i");
         $createUser = $_SESSION['user_name'];
         $type  = 'НЕД, Москва';
-        $type = 'КОРФ, Москва';
         $token = $name . $fam . $otc . $mobPhone . $createUser;
         mysqli_query($conn,"INSERT INTO `users`(`pod`) VALUES ('$token')");
         
@@ -341,11 +374,17 @@ if ($howWrite == "1.5") {
             die("запоните поле axapta");
             
         }
+        else {
+        $rullAxapta = 'не заданно';
+        }
         
         if (($gppCheck == true) and (empty($rullGpp))) {
         
             die("заполните поле ГПП");
             
+        }
+        else {
+            $rullGpp = 'не заданно';
         }
         
         if (($tabCheck == true) and (empty($rullTab))){
@@ -353,6 +392,9 @@ if ($howWrite == "1.5") {
             die("заполните поле Табель");
         
         }
+        else {
+            $rullTab = 'не заданно';
+        } 
         
         if (empty($workPhone)) {
          
@@ -365,7 +407,6 @@ if ($howWrite == "1.5") {
         $date = date("Y-m-d H:i");
         $createUser = $_SESSION['user_name'];
         $type  = 'НЕД, Филиалы';
-        $type = 'КОРФ, Москва';
         $token = $name . $fam . $otc . $mobPhone . $createUser;
         mysqli_query($conn,"INSERT INTO `users`(`pod`) VALUES ('$token')");
         
