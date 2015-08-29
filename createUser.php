@@ -55,11 +55,17 @@ else {
             }
         }
     }
-    if ($_SESSION['userRull'] == "full") {
+    if (($_SESSION['userRull'] == "full") or ($_SESSION['group']) == 'groupSysAdmins') {
         
         foreach ($selectRull as $value) {
             echo $value;
         }
+    }
+    
+    if ($_SESSION['group'] == 'fillip') {
+        
+            echo "<option value='1.4'>НЕД, Москва</option>";
+        
     }
        echo '</select>
             </center>' ;

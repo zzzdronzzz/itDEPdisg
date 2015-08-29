@@ -33,15 +33,11 @@ if (empty($_SESSION['user_id'])) {
     
 }
 
-else { 
-            $sql = 'SELECT * FROM `users` WHERE 1';
+elseif (empty($_SESSION['group'])){ 
+    $user = $_SESSION['user_id'];
+            $sql = "SELECT * FROM `users` WHERE `create_user` =  '".$_SESSION['user_name']."'";
            $result =  mysqli_query($conn,$sql);
 
-
-?>
-
-
-                <?php
     echo '<table class = "table table-striped"';
     while ($row = mysqli_fetch_array($result)) {
      
@@ -64,6 +60,34 @@ else {
     }
     
     
+}
+elseif (($_SESSION['group'] == 'groupSysAdmins') or ($_SESSION['group'] == 'saarc')) {
+
+    $user = $_SESSION['user_id'];
+            $sql = "SELECT * FROM `users` WHERE 1";
+           $result =  mysqli_query($conn,$sql);
+
+    echo '<table class = "table table-striped"';
+    while ($row = mysqli_fetch_array($result)) {
+     
+        echo '
+        <tr>
+        <td>'.$row[1].' '.$row[2].' '.$row[3].'</td>
+        <td>'.$row[6].'</td>
+        <td>'.$row[12].'</td>
+        <td>'.$row[11].'</td>
+        <td>'.$row[14].'</td>
+        <td><form method="get" action="obr.php">
+        
+        <input type = "hidden" value = '.$row[0].' name="id">
+        <input type= "submit" value = "просмотреть" class = "btn btn-mini btn-primary">
+        </form>
+        </td>
+        </tr>
+        ';
+        
+    }
+
 }
 
 ?>

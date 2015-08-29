@@ -34,7 +34,7 @@ elseif (!empty($_SESSION['user_id']) and ($_SESSION['userRull'] == "full")) {
             <ul class="nav nav-list">
                 <li><a href="index.php">Главная</a></li>
                 <li><a href="createUser.php">Создать Заявку</a></li>
-                <li><a href="arc.php">архив</a></li>
+                <li><a href="arc.php">Обрабоать</a></li>
                 <li><a href="functions/exit.php">Выход</a></li>
             </ul>
 
